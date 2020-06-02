@@ -6,7 +6,7 @@ void selectionSort(int* array, int length)//selection sort function
 	for (i = 0; i < (length - 1); i++)
 	{
 		minat = i;
-		min = array[i];
+ 		min = array[i];
 
 		for (j = i + 1; j < (length); j++) //select the min of the rest of array
 		{
@@ -31,7 +31,11 @@ void printElements(int* array, int length) //print array elements
 {
 	int i = 0;
 	for (i = 0; i < 10; i++)
-		cout << array[i] << endl;
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+	
 }
 
 
@@ -39,6 +43,9 @@ void main()
 {
 
 	int a[] = { 9,6,5,23,2,6,2,7,1,8 };   // array to sort 
+	cout << "Before: ";
+	printElements(a, 10);
 	selectionSort(a, 10);                 //call to selection sort  
+	cout << "After:  ";
 	printElements(a, 10);               // print elements 
 }
